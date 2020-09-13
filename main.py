@@ -8,7 +8,7 @@ from cartoonize import cartoon
 UPLOAD_FOLDER = 'static/uploads'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates')
 
 # app.secret_key = "secret key"
 # app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
