@@ -4,5 +4,5 @@ from test import tst
 
 @app.route('/')
 def home():
-    return "test"+tst
+    return "test"+tst()
 
