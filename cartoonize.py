@@ -1,3 +1,6 @@
+def test(txt):
+    return "test"+txt
+
 def cartoon(img):
     import cv2
     import numpy as np
