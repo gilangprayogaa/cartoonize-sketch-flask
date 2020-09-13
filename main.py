@@ -21,7 +21,7 @@ app = Flask(__name__, template_folder='templates')
 
 @app.route('/')
 def upload_form():
-	return render_template('home.html')
+	return "samir"
 
 # @app.route('/img', methods=['POST'])
 # def upload_image():
