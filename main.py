@@ -1,6 +1,6 @@
 import os
 from flask import Flask, flash, request, redirect, url_for, render_template
-# from werkzeug.utils import secure_filename
+from werkzeug.utils import secure_filename
 # import cv2
 # import numpy as np
 # from cartoonize import cartoon
@@ -28,7 +28,7 @@ def home():
 # 		flash('No file part')
 # 		return redirect(request.url)
 # 	file = request.files['file']
-# 	if file.filename == '':
+# 	if file.filename == '':pip install Werkzeug
 # 		flash('No image selected for uploading')
 # 		return redirect(request.url)
 # 	if file and allowed_file(file.filename):
