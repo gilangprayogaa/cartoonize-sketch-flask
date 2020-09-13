@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',    filename='css/reset.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',    filename='css/style.css') }}">
+    <title>Articles</title>
+</head>
+<body>
+    {% extends "home.html" %}
+    
+    {% block content %}
+    <div class="articles_contents">
+                
+    </div>
+    <!-- <script type="text/javascript" src="../static/js/home.js"></script>
+    <script type="text/javascript" src="../static/js/articles_contents.js"></script> -->
+    
+    <script type="text/javascript" src="{{ url_for('static',    filename='js/articles_contents.js') }}"></script>
+    
+    {% endblock %}
+    <script type="text/javascript" src="{{ url_for('static',    filename='js/home.js') }}"></script>
+</body>
+</html>

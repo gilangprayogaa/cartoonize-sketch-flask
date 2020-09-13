@@ -3,10 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static',    filename='css/style.css') }}">
-    <title>parent template</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',    filename='css/reset.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',    filename='css/style.css') }}">
+    <!-- <link rel="stylesheet" type="text/css" href="../static/css/reset.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="../static/css/style.css"> -->
+    <title>Samir Khanal</title>
 </head>
 <body>
-    hello
+    <div class="main_div">
+        <div class="left_content">
+            <div class="top_info_bar">
+
+            </div>
+            <div class="buttons">
+
+            </div>
+            {% block content %}
+
+            <div class="home_contents">
+                
+            </div>
+            {% endblock %}
+            
+        </div>
+    
+        <div class="right_content">
+    
+        </div>
+    </div>
+    
+
+    
+    <script type="text/javascript" src="{{ url_for('static',    filename='js/home.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static',    filename='js/home_contents.js') }}"></script>
+    <!-- <script type="text/javascript" src="../static/js/home.js"></script>
+    <script type="text/javascript" src="../static/js/home_contents.js"></script> -->
 </body>
 </html>
