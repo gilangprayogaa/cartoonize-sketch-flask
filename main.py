@@ -9,6 +9,7 @@ UPLOAD_FOLDER = 'static/uploads'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 
 app = Flask(__name__)
+
 app.secret_key = "secret key"
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
@@ -21,7 +22,7 @@ def allowed_file(filename):
 def upload_form():
 	return render_template('home.html')
 
-@app.route('/', methods=['POST'])
+@app.route('/img', methods=['POST'])
 def upload_image():
 	if 'file' not in request.files:
 		flash('No file part')
