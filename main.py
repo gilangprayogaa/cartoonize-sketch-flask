@@ -1,6 +1,6 @@
 import os
 from flask import Flask, flash, request, redirect, url_for, render_template
-from werkzeug.utils import secure_filename
+# from werkzeug.utils import secure_filename
 import cv2
 import numpy as np
 from cartoonize import cartoon
@@ -32,7 +32,8 @@ def upload_image():
 		flash('No image selected for uploading')
 		return redirect(request.url)
 	if file and allowed_file(file.filename):
-		filename = secure_filename(file.filename)
+		# filename = secure_filename(file.filename)
+        filename = file.filename
 		file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 		#print('upload_image filename: ' + filename)
 		flash('Image successfully uploaded and displayed')
