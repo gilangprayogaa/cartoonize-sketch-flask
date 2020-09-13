@@ -4,3 +4,19 @@
     background: #A0D7FF;
     display: table;
 }
+
+.container{
+    width: 500px;
+    margin-left: 10%;
+}
+
+
+.image_wrapper{
+    max-width: 400px;
+    max-height: 500px;
+    margin-left: 30px;
+    /* object-fit: cover; */
+    overflow: hidden;
+    background-size: contain;
+    /* background-size: cover; */
+}

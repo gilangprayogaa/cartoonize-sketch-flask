@@ -11,8 +11,8 @@
 </head>
 <body>
     <div class="main_div">
-        hello
-        <div>
+        
+        <div class="container">
             <p>
                 {% with messages = get_flashed_messages() %}
                   {% if messages %}
@@ -35,11 +35,11 @@
                     <input type="submit" value="Submit">
                 </p>
             </form>
-            <!-- {% if filename %}
-            <div>
+            {% if filename %}
+            <div class="image_wrapper">
                 <img src="{{ url_for('display_image', filename=filename) }}">
             </div>
-            {% endif %} -->
+            {% endif %}
         </div>
     </div>
     
