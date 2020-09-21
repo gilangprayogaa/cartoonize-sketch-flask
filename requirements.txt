@@ -10,6 +10,7 @@ MarkupSafe==1.1.1
 mccabe==0.6.1
 numpy==1.19.2
 opencv-python==4.4.0.42
+opencv-python-headless==4.4.0.42
 pylint==2.6.0
 six==1.15.0
 toml==0.10.1
