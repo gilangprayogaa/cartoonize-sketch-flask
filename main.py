@@ -22,25 +22,25 @@ def home():
    return render_template("home.html")
 
 
-@app.route('/img', methods=['POST'])
-def upload_image():
-	if 'file' not in request.files:
-		flash('No file part')
-		return redirect(request.url)
-	file = request.files['file']
-	if file.filename == '':
-		flash('No image selected for uploading')
-		return redirect(request.url)
-	if file and allowed_file(file.filename):
-		filename = secure_filename(file.filename)
-        # filename = file.filename
-		file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-		#print('upload_image filename: ' + filename)
-		flash('Image successfully uploaded and displayed')
-		return render_template('home.html', filename=filename)
-	else:
-		flash('Allowed image types are -> png, jpg, jpeg')
-		return redirect(request.url)
+# @app.route('/img', methods=['POST'])
+# def upload_image():
+# 	if 'file' not in request.files:
+# 		flash('No file part')
+# 		return redirect(request.url)
+# 	file = request.files['file']
+# 	if file.filename == '':
+# 		flash('No image selected for uploading')
+# 		return redirect(request.url)
+# 	if file and allowed_file(file.filename):
+# 		filename = secure_filename(file.filename)
+#         # filename = file.filename
+# 		file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+# 		#print('upload_image filename: ' + filename)
+# 		flash('Image successfully uploaded and displayed')
+# 		return render_template('home.html', filename=filename)
+# 	else:
+# 		flash('Allowed image types are -> png, jpg, jpeg')
+# 		return redirect(request.url)
 
 # @app.route('/display/<filename>')
 # def display_image(filename):	
