@@ -7,7 +7,7 @@ from cartoonize import cartoon
 
 app = Flask(__name__)
 
-basedir = os.path.abspath(os.path.dirname(__file__))
+# basedir = os.path.abspath(os.path.dirname(__file__))
 
 UPLOAD_FOLDER = 'static/uploads'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
@@ -36,7 +36,7 @@ def upload_image():
 	if file and allowed_file(file.filename):
 		filename = secure_filename(file.filename)
         # filename = file.filename
-		file.save(os.path.join(basedir, app.config['UPLOAD_FOLDER'], filename))
+		file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 		#print('upload_image filename: ' + filename)
 		flash('Image successfully uploaded and displayed')
 		return render_template('home.html', filename=filename)
