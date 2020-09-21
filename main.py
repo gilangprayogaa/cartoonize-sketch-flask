@@ -55,7 +55,7 @@ def upload_image():
 		return redirect(request.url)
 	if file and allowed_file(file.filename):
 		filename = secure_filename(file.filename)
-        # filename = file.filename
+		filename = file.filename
 		file.save(os.path.join(UPLOAD_FOLDER, filename))
 		#print('upload_image filename: ' + filename)
 		flash('Image successfully uploaded and displayed')
