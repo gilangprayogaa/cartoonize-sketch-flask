@@ -42,15 +42,15 @@ def upload_image():
 		flash('Allowed image types are -> png, jpg, jpeg')
 		return redirect(request.url)
 
-# @app.route('/display/<filename>')
-# def display_image(filename):	
-#     img = cv2.imread('static/uploads/'+filename)
+@app.route('/display/<filename>')
+def display_image(filename):	
+    img = cv2.imread('static/uploads/'+filename)
 
-#     img = cartoon(img)
+    img = cartoon(img)
 
-#     ret, jpeg = cv2.imencode('.jpg', img)
-#     os.remove('static/uploads/'+filename)
-#     return jpeg.tobytes()
+    ret, jpeg = cv2.imencode('.jpg', img)
+    os.remove('static/uploads/'+filename)
+    return jpeg.tobytes()
 
 
 
