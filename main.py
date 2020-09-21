@@ -28,7 +28,7 @@ def upload_image():
 		flash('No file part')
 		return redirect(request.url)
 	file = request.files['file']
-	if file.filename == '':pip install Werkzeug
+	if file.filename == '':
 		flash('No image selected for uploading')
 		return redirect(request.url)
 	if file and allowed_file(file.filename):
