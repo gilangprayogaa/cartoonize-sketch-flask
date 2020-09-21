@@ -56,5 +56,4 @@ def display_image(filename):
 
 
 if __name__ == '__main__':
-   # app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
    app.run()
