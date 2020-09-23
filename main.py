@@ -24,10 +24,11 @@ def home():
    return render_template("home.html")
 
 
+
 @app.route('/img', methods=['POST'])
 def upload_image():
 	if 'file' not in request.files:
-		flash('No file part')
+		flash('No file selected')
 		return redirect(request.url)
 	file = request.files['file']
 	if file.filename == '':
@@ -58,4 +59,4 @@ def display_image(filename):
 
 
 if __name__ == '__main__':
-   app.run()
+   app.run(debug=True)
