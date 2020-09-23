@@ -30,7 +30,16 @@
 
     };
 
-    FB.Logout();
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) { return; }
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <script>
+    
 
     function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
       console.log('statusChangeCallback');
@@ -124,15 +133,15 @@
       <div class="image_wrapper">
         <img src="{{ url_for('display_image', filename=filename) }}">
       </div>
-    {% endif %}
+      {% endif %}
 
-  </div>
-  <div class="fb-share-button" data-href="{{ url_for('display_image', filename=filename) }}" data-size="small"><a
-      target="_blank"
-      href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fimage-cartoonizing.herokuapp.com%2F&amp;src=sdkpreparse"
-      class="fb-xfbml-parse-ignore">Share</a>
-  </div>
-    
+    </div>
+    <div class="fb-share-button" data-href="{{ url_for('display_image', filename=filename) }}" data-size="small"><a
+        target="_blank"
+        href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fimage-cartoonizing.herokuapp.com%2F&amp;src=sdkpreparse"
+        class="fb-xfbml-parse-ignore">Share</a>
+    </div>
+
 
 
   </div>
