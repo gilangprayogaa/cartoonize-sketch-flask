@@ -6,7 +6,8 @@ import numpy as np
 from cartoonize import cartoon
 
 app = Flask(__name__)
-
+# img =''
+# filename_=''
 # basedir = os.path.abspath(os.path.dirname(__file__))
 
 UPLOAD_FOLDER = 'static/uploads'
@@ -44,6 +45,9 @@ def upload_image():
 	else:
 		flash('Allowed image types are -> png, jpg, jpeg')
 		return redirect(request.url)
+
+# @app.route('/cartoonize')
+# def cartoonize():
 
 @app.route('/display/<filename>')
 def display_image(filename):	
