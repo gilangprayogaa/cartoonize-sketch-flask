@@ -58,17 +58,17 @@ def operation():
 	if "cartoonize" in request.form:
 		img = cv2.imread('static/uploads/'+filename)
 		prev_filename = filename
-		filename = filename+"_1"
+		filename1 = filename+"_1"
 		img = cartoon(img)
-		cv2.imwrite(os.path.join(app.config['UPLOAD_FOLDER'], filename),img)
-		return render_template('home.html', filename=prev_filename, filename_1 = filename)		
+		cv2.imwrite(os.path.join(app.config['UPLOAD_FOLDER'], filename1),img)
+		return render_template('home.html', filename=prev_filename, filename_1 = filename1)		
 	elif "sketch" in request.form:
 		img = cv2.imread('static/uploads/'+filename)
 		prev_filename = filename
-		filename = filename+"_2"
+		filename2 = filename+"_2"
 		img = sketch(img)
-		cv2.imwrite(os.path.join(app.config['UPLOAD_FOLDER'], filename),img)
-		return render_template('home.html', filename=prev_filename, filename_2 = filename)
+		cv2.imwrite(os.path.join(app.config['UPLOAD_FOLDER'], filename2),img)
+		return render_template('home.html', filename=prev_filename, filename_2 = filename2)
 	else:
 		return render_template('home.html')
 
