@@ -61,7 +61,7 @@ def cartoon(img):
     # org 
     h,w,d = img.shape
     
-    org = (w-60, h-20) 
+    org = (w-60, h-16) 
     
     # fontScale 
     fontScale = 1

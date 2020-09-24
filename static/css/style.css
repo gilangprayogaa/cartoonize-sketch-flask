@@ -7,6 +7,7 @@
 }
 
 .header{
+    margin-top: 10px;
     text-align: center;
     align-items: center;
     color: coral;
@@ -16,22 +17,22 @@
 
 .select_btn{
     margin-bottom: 8px;
-    margin-left: 8px;
+    /* margin-left: 8px; */
 }
 
 .submit_div{
     margin-top: 10px;
     margin-bottom: 8px;
     /* align-items: center; */
-    /* display: table; */
+    display: table;
 }
 
 
 #submit_btn{
     float: left;
     margin-right: 0px;
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     /* display: inline; */
     height: 20px;
     width: 100px;
@@ -43,10 +44,20 @@
 
 .selection_buttons{
     width: 80%;
-    margin-top: 12px;
-    margin-bottom: 12px;
+    margin-top: 8px;
+    margin-bottom: 8px;
     display: table;
 
+}
+
+.message{
+    margin-top: 8px;
+    /* margin-bottom: 8px; */
+    text-align: center;
+    align-items: center;
+    font-size: 10px;
+    font-weight: bolder;
+    color: red;
 }
 
 #cartoonize{
@@ -79,6 +90,7 @@
 }
 
 .image_container{
+    /* position: relative; */
     margin-top: 12px;
     width: 300px;
     height: 300px;
@@ -87,6 +99,7 @@
 
 .image_wrapper_small{
     position: absolute;
+    
     max-width: 100px;
     height: 100px;
     margin-left: 0px;
@@ -94,9 +107,11 @@
     overflow: hidden;
     background-size: contain;
     /* background-size: cover; */
+
 }
 
 .image_wrapper{
+    /* position: relative; */
     max-width: 300px;
     height: 300px;
     /* margin-left: 10px; */
@@ -108,7 +123,7 @@
 
 .download_btn{
     width:25%;
-    margin-top: 10px;
+    margin-top: 8px;
     
 }
 
