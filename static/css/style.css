@@ -1,6 +1,6 @@
 .main_div {
     width: 400px;
-    height: 568px;
+    height: 600px;
     background: black;
     display: table;
     color: blanchedalmond;
@@ -52,10 +52,12 @@
 
 .message{
     margin-top: 8px;
+    float: left;
     /* margin-bottom: 8px; */
     text-align: center;
+    text-transform: inherit;
     align-items: center;
-    font-size: 10px;
+    font-size: 15px;
     font-weight: bolder;
     color: red;
 }

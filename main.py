@@ -1,5 +1,5 @@
 import os
-from flask import Flask, flash, request, redirect, url_for, render_template
+from flask import Flask, flash, request, redirect, url_for, render_template, send_file
 from werkzeug.utils import secure_filename
 import cv2
 import numpy as np
@@ -8,8 +8,9 @@ from sketch import sketch
 
 app = Flask(__name__)
 # img =''
-global filename
+global filename, current_file
 filename = ''
+current_file =''
 # basedir = os.path.abspath(os.path.dirname(__file__))
 
 UPLOAD_FOLDER = 'static/uploads'
@@ -53,19 +54,23 @@ def upload_image():
 
 @app.route('/operation', methods=['POST'])
 def operation():
-	global filename
+	global filename, current_file
 	# print(filename)
 	if "cartoonize" in request.form:
 		img = cv2.imread('static/uploads/'+filename)
 		prev_filename = filename
-		filename1 = filename+"_1"
+		name = filename.split('.')
+		filename1 = name[0]+"_1."+name[1]
+		current_file = filename1
 		img = cartoon(img)
 		cv2.imwrite(os.path.join(app.config['UPLOAD_FOLDER'], filename1),img)
 		return render_template('home.html', filename=prev_filename, filename_1 = filename1)		
 	elif "sketch" in request.form:
 		img = cv2.imread('static/uploads/'+filename)
 		prev_filename = filename
-		filename2 = filename+"_2"
+		name = filename.split('.')
+		filename2 = name[0]+"_2."+name[1]
+		current_file = filename2
 		img = sketch(img)
 		cv2.imwrite(os.path.join(app.config['UPLOAD_FOLDER'], filename2),img)
 		return render_template('home.html', filename=prev_filename, filename_2 = filename2)
@@ -80,6 +85,14 @@ def display_image(filename):
     # os.remove('static/uploads/'+filename)
 	return jpeg.tobytes()
 
+@app.route('/return-files')
+def return_files():
+	global current_file
+	if current_file == '':
+		return render_template('home.html')
+	else:
+		file_path = os.path.join(app.config['UPLOAD_FOLDER'], current_file)
+		return send_file(file_path, as_attachment=True, attachment_filename=current_file)
 
 
 if __name__ == '__main__':
