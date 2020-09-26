@@ -9,8 +9,8 @@ In case of sketching, I have used colour-dodge for combining two negative and po
 This project is Hosted on Heroku using Flask on https://image-cartoonizing.herokuapp.com/
 
 # Visuals
-![cartoonize image](https://github.com/samirkhanal35/X-ray_enhancer/blob/master/cartoonize1.png)
-![sketch image](https://github.com/samirkhanal35/X-ray_enhancer/blob/master/sketch.png)
+![cartoonize image](https://github.com/samirkhanal35/cartoonize-sketch-flask/blob/master/cartoonize1.png)
+![sketch image](https://github.com/samirkhanal35/cartoonize-sketch-flask/blob/master/sketch.png)
 
 # Installation
 
