@@ -16,6 +16,8 @@ This project is Hosted on Heroku using Flask on https://image-cartoonizing.herok
 
 To Install(Please search and follow installation according to your operating system):<br /><br />
 
+<b>Prerequisites:</b><br />
+
 Python<br />
 For linux users: sudo apt-get install python3<br />
 Then install pip: apt install python3-pip<br /><br />
@@ -26,8 +28,8 @@ For linux users: pip install flask<br /><br />
 For other users, you can follow <a href="https://www.python.org/downloads/">this</a> link.<br />
 For OpenCV and Flask also You can go to their respective wesites for installation.<br />
 
-After installation of Python, OpenCV and Flask , you can clone or download the repo and run the Flask app.<br />
-In linux, run command(Project directory): <br />
+After installation of <b>Prerequisites</b> , you can clone or download the repo and run the Flask app.<br />
+In linux, run command(In Project directory): <br />
 Flask run<br />
 OR<br />
 python main.py<br />
