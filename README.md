@@ -12,7 +12,7 @@ This project is Hosted on Heroku using Flask on https://image-cartoonizing.herok
 ![cartoonize image](https://github.com/samirkhanal35/cartoonize-sketch-flask/blob/master/cartoonize1.png)<br />
 ![sketch image](https://github.com/samirkhanal35/cartoonize-sketch-flask/blob/master/sketch.png)
 
-# Installation
+# Installation and Execution
 
 To Install(Please search and follow installation according to your operating system):<br /><br />
 
