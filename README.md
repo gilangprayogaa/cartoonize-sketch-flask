@@ -3,9 +3,9 @@
 # Description
 
 It is a simple OpenCV project hosted using Flask on Heroku. It is an Flask app where frontend is done using HTML and CSS. <br /><br />
-In case of cartoonizing, I have used Bilateral Filtering for smoothing, Histogram equalization for equalizing the intensity levels and 
-Put-text of OpenCV to put signature text on cartoonized image.<br /><br />
-In case of sketching, I have used colour-dodge for combining two negative and positive images to produce sketch.<br /><br />
+Image Cartoonize using Bilateral filtering for transforming image colour to as in cartoons, filter2D to sharpen the image,  Histogram equalization to enhance its contrast by equalizing its RGB intensity values  and put-text to put text as signature on cartoonized  image. <br /><br />
+Sketching using colour-dodge on original image and generated negative image  and brightness reduction & deployed using Flask.
+<br /><br />
 This project is Hosted on Heroku using Flask on https://image-cartoonizing.herokuapp.com/
 
 # Visuals
